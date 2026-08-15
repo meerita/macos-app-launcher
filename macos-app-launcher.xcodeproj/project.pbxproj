@@ -1,0 +1,563 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10A000000000000000000101 /* LauncherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000001 /* LauncherApp.swift */; };
+		10A000000000000000000102 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000002 /* AppDelegate.swift */; };
+		10A000000000000000000103 /* InstalledApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000003 /* InstalledApplication.swift */; };
+		10A000000000000000000104 /* ApplicationCatalog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000004 /* ApplicationCatalog.swift */; };
+		10A000000000000000000105 /* ApplicationSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000005 /* ApplicationSearch.swift */; };
+		10A000000000000000000106 /* ApplicationLauncher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000006 /* ApplicationLauncher.swift */; };
+		10A000000000000000000107 /* UsageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000007 /* UsageStore.swift */; };
+		10A000000000000000000108 /* HotKeyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000008 /* HotKeyManager.swift */; };
+		10A000000000000000000109 /* LauncherWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000009 /* LauncherWindowController.swift */; };
+		10A00000000000000000010A /* LauncherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A00000000000000000000A /* LauncherViewModel.swift */; };
+		10A00000000000000000010B /* LauncherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A00000000000000000000B /* LauncherView.swift */; };
+		10A00000000000000000010C /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A00000000000000000000C /* SearchFieldView.swift */; };
+		10A00000000000000000010D /* ApplicationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A00000000000000000000D /* ApplicationRow.swift */; };
+		10A00000000000000000010F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A00000000000000000000F /* Carbon.framework */; };
+		10A000000000000000000110 /* ApplicationSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000010 /* ApplicationSearchTests.swift */; };
+		10A000000000000000000111 /* ApplicationCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000011 /* ApplicationCatalogTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		10A000000000000000000201 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 10A000000000000000000020 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10A000000000000000000030;
+			remoteInfo = "macos-app-launcher";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10A000000000000000000001 /* LauncherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherApp.swift; sourceTree = "<group>"; };
+		10A000000000000000000002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		10A000000000000000000003 /* InstalledApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstalledApplication.swift; sourceTree = "<group>"; };
+		10A000000000000000000004 /* ApplicationCatalog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCatalog.swift; sourceTree = "<group>"; };
+		10A000000000000000000005 /* ApplicationSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSearch.swift; sourceTree = "<group>"; };
+		10A000000000000000000006 /* ApplicationLauncher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationLauncher.swift; sourceTree = "<group>"; };
+		10A000000000000000000007 /* UsageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageStore.swift; sourceTree = "<group>"; };
+		10A000000000000000000008 /* HotKeyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotKeyManager.swift; sourceTree = "<group>"; };
+		10A000000000000000000009 /* LauncherWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherWindowController.swift; sourceTree = "<group>"; };
+		10A00000000000000000000A /* LauncherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherViewModel.swift; sourceTree = "<group>"; };
+		10A00000000000000000000B /* LauncherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauncherView.swift; sourceTree = "<group>"; };
+		10A00000000000000000000C /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
+		10A00000000000000000000D /* ApplicationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationRow.swift; sourceTree = "<group>"; };
+		10A00000000000000000000E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10A00000000000000000000F /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		10A000000000000000000010 /* ApplicationSearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationSearchTests.swift; sourceTree = "<group>"; };
+		10A000000000000000000011 /* ApplicationCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCatalogTests.swift; sourceTree = "<group>"; };
+		10A000000000000000000012 /* macos-app-launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macos-app-launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10A000000000000000000013 /* macos-app-launcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macos-app-launcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		10A000000000000000000040 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A00000000000000000010F /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10A000000000000000000041 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10A000000000000000000050 = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000051 /* macos-app-launcher */,
+				10A000000000000000000052 /* macos-app-launcherTests */,
+				10A000000000000000000053 /* Frameworks */,
+				10A000000000000000000054 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		10A000000000000000000051 /* macos-app-launcher */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000060 /* App */,
+				10A000000000000000000061 /* ApplicationCatalog */,
+				10A000000000000000000062 /* Search */,
+				10A000000000000000000063 /* Launching */,
+				10A000000000000000000064 /* Usage */,
+				10A000000000000000000065 /* HotKey */,
+				10A000000000000000000066 /* Window */,
+				10A000000000000000000067 /* UI */,
+				10A00000000000000000000E /* Info.plist */,
+			);
+			path = "macos-app-launcher";
+			sourceTree = "<group>";
+		};
+		10A000000000000000000052 /* macos-app-launcherTests */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000010 /* ApplicationSearchTests.swift */,
+				10A000000000000000000011 /* ApplicationCatalogTests.swift */,
+			);
+			path = "macos-app-launcherTests";
+			sourceTree = "<group>";
+		};
+		10A000000000000000000053 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10A00000000000000000000F /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000054 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000012 /* macos-app-launcher.app */,
+				10A000000000000000000013 /* macos-app-launcherTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000060 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000001 /* LauncherApp.swift */,
+				10A000000000000000000002 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000061 /* ApplicationCatalog */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000003 /* InstalledApplication.swift */,
+				10A000000000000000000004 /* ApplicationCatalog.swift */,
+			);
+			path = ApplicationCatalog;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000062 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000005 /* ApplicationSearch.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000063 /* Launching */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000006 /* ApplicationLauncher.swift */,
+			);
+			path = Launching;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000064 /* Usage */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000007 /* UsageStore.swift */,
+			);
+			path = Usage;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000065 /* HotKey */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000008 /* HotKeyManager.swift */,
+			);
+			path = HotKey;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000066 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000009 /* LauncherWindowController.swift */,
+			);
+			path = Window;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000067 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				10A00000000000000000000A /* LauncherViewModel.swift */,
+				10A00000000000000000000B /* LauncherView.swift */,
+				10A00000000000000000000C /* SearchFieldView.swift */,
+				10A00000000000000000000D /* ApplicationRow.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		10A000000000000000000030 /* macos-app-launcher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10A000000000000000000090 /* Build configuration list for PBXNativeTarget "macos-app-launcher" */;
+			buildPhases = (
+				10A000000000000000000070 /* Sources */,
+				10A000000000000000000040 /* Frameworks */,
+				10A000000000000000000071 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "macos-app-launcher";
+			productName = "macos-app-launcher";
+			productReference = 10A000000000000000000012 /* macos-app-launcher.app */;
+			productType = "com.apple.product-type.application";
+		};
+		10A000000000000000000032 /* macos-app-launcherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10A000000000000000000091 /* Build configuration list for PBXNativeTarget "macos-app-launcherTests" */;
+			buildPhases = (
+				10A000000000000000000072 /* Sources */,
+				10A000000000000000000041 /* Frameworks */,
+				10A000000000000000000073 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				10A000000000000000000202 /* PBXTargetDependency */,
+			);
+			name = "macos-app-launcherTests";
+			productName = "macos-app-launcherTests";
+			productReference = 10A000000000000000000013 /* macos-app-launcherTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		10A000000000000000000020 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2660;
+				LastUpgradeCheck = 2660;
+				TargetAttributes = {
+					10A000000000000000000030 = {
+						CreatedOnToolsVersion = 26.6;
+					};
+					10A000000000000000000032 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = 10A000000000000000000030;
+					};
+				};
+			};
+			buildConfigurationList = 10A000000000000000000092 /* Build configuration list for PBXProject "macos-app-launcher" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 10A000000000000000000050;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 10A000000000000000000054 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				10A000000000000000000030 /* macos-app-launcher */,
+				10A000000000000000000032 /* macos-app-launcherTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		10A000000000000000000071 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10A000000000000000000073 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		10A000000000000000000070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A000000000000000000101 /* LauncherApp.swift in Sources */,
+				10A000000000000000000102 /* AppDelegate.swift in Sources */,
+				10A000000000000000000103 /* InstalledApplication.swift in Sources */,
+				10A000000000000000000104 /* ApplicationCatalog.swift in Sources */,
+				10A000000000000000000105 /* ApplicationSearch.swift in Sources */,
+				10A000000000000000000106 /* ApplicationLauncher.swift in Sources */,
+				10A000000000000000000107 /* UsageStore.swift in Sources */,
+				10A000000000000000000108 /* HotKeyManager.swift in Sources */,
+				10A000000000000000000109 /* LauncherWindowController.swift in Sources */,
+				10A00000000000000000010A /* LauncherViewModel.swift in Sources */,
+				10A00000000000000000010B /* LauncherView.swift in Sources */,
+				10A00000000000000000010C /* SearchFieldView.swift in Sources */,
+				10A00000000000000000010D /* ApplicationRow.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10A000000000000000000072 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A000000000000000000110 /* ApplicationSearchTests.swift in Sources */,
+				10A000000000000000000111 /* ApplicationCatalogTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		10A000000000000000000202 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10A000000000000000000030 /* macos-app-launcher */;
+			targetProxy = 10A000000000000000000201 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		10A000000000000000000080 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		10A000000000000000000081 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		10A000000000000000000082 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "macos-app-launcher/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.meerita.macos-app-launcher";
+				PRODUCT_MODULE_NAME = MacOSAppLauncher;
+				PRODUCT_NAME = "macos-app-launcher";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		10A000000000000000000083 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "macos-app-launcher/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.meerita.macos-app-launcher";
+				PRODUCT_MODULE_NAME = MacOSAppLauncher;
+				PRODUCT_NAME = "macos-app-launcher";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+		10A000000000000000000084 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.meerita.macos-app-launcherTests";
+				PRODUCT_MODULE_NAME = MacOSAppLauncherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macos-app-launcher.app/Contents/MacOS/macos-app-launcher";
+			};
+			name = Debug;
+		};
+		10A000000000000000000085 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.meerita.macos-app-launcherTests";
+				PRODUCT_MODULE_NAME = MacOSAppLauncherTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macos-app-launcher.app/Contents/MacOS/macos-app-launcher";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		10A000000000000000000090 /* Build configuration list for PBXNativeTarget "macos-app-launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10A000000000000000000082 /* Debug */,
+				10A000000000000000000083 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10A000000000000000000091 /* Build configuration list for PBXNativeTarget "macos-app-launcherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10A000000000000000000084 /* Debug */,
+				10A000000000000000000085 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10A000000000000000000092 /* Build configuration list for PBXProject "macos-app-launcher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10A000000000000000000080 /* Debug */,
+				10A000000000000000000081 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 10A000000000000000000020 /* Project object */;
+}
