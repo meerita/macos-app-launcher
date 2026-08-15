@@ -78,8 +78,15 @@ final class LauncherWindowController: NSWindowController, NSWindowDelegate {
         let width: CGFloat = 660
         let visibleRows = max(1, min(resultCount, 8))
         let height = CGFloat(82 + (visibleRows * 56) + 14)
-        var frame = window.frame
-        frame.size = CGSize(width: width, height: height)
+        let currentFrame = window.frame
+        let topY = currentFrame.maxY
+        let centerX = currentFrame.midX
+        let frame = NSRect(
+            x: centerX - width / 2,
+            y: topY - height,
+            width: width,
+            height: height
+        )
         window.setFrame(frame, display: true, animate: false)
     }
 
