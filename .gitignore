@@ -8,6 +8,7 @@ xcuserdata/
 
 ## Local build output
 .derivedData/
+*.profraw
 
 ## Obj-C/Swift specific
 *.hmap
