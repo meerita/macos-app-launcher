@@ -4,6 +4,10 @@
 
 ## User settings
 xcuserdata/
+*.xcuserstate
+
+## Local build output
+.derivedData/
 
 ## Obj-C/Swift specific
 *.hmap
