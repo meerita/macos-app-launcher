@@ -53,7 +53,7 @@ final class ApplicationSearchTests: XCTestCase {
         XCTAssertEqual(results.map(\.application.name), ["Visual Studio Code"])
     }
 
-    func testUsageInfluencesEmptyQueryOrdering() {
+    func testEmptyQueryReturnsNoResults() {
         let now = Date()
         let terminal = app("Terminal", bundleIdentifier: "com.apple.Terminal")
         let safari = app("Safari", bundleIdentifier: "com.apple.Safari")
@@ -67,7 +67,7 @@ final class ApplicationSearchTests: XCTestCase {
             now: now
         )
 
-        XCTAssertEqual(results.map(\.application.name), ["Terminal", "Safari"])
+        XCTAssertTrue(results.isEmpty)
     }
 
     func testUsageBreaksTiesWithinSameMatchClass() {

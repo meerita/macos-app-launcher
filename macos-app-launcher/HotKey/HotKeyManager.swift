@@ -5,10 +5,24 @@ import Foundation
 final class HotKeyManager {
     private var hotKeyRef: EventHotKeyRef?
     private var eventHandlerRef: EventHandlerRef?
+    private var shortcut: KeyboardShortcutPreset
     private let onTrigger: @MainActor () -> Void
+    private let onRegistrationFailure: @MainActor (KeyboardShortcutPreset, OSStatus) -> Void
 
-    init(onTrigger: @escaping @MainActor () -> Void) {
+    init(
+        shortcut: KeyboardShortcutPreset,
+        onTrigger: @escaping @MainActor () -> Void,
+        onRegistrationFailure: @escaping @MainActor (KeyboardShortcutPreset, OSStatus) -> Void = { _, _ in }
+    ) {
+        self.shortcut = shortcut
         self.onTrigger = onTrigger
+        self.onRegistrationFailure = onRegistrationFailure
+    }
+
+    func updateShortcut(_ shortcut: KeyboardShortcutPreset) {
+        self.shortcut = shortcut
+        stop()
+        start()
     }
 
     func start() {
@@ -61,8 +75,8 @@ final class HotKeyManager {
 
         let hotKeyID = EventHotKeyID(signature: OSType(0x4D414C48), id: 1)
         let registerStatus = RegisterEventHotKey(
-            UInt32(kVK_Space),
-            UInt32(optionKey),
+            shortcut.carbonKeyCode,
+            shortcut.carbonModifiers,
             hotKeyID,
             GetApplicationEventTarget(),
             0,
@@ -70,7 +84,9 @@ final class HotKeyManager {
         )
 
         if registerStatus != noErr {
+            let failedShortcut = shortcut
             stop()
+            onRegistrationFailure(failedShortcut, registerStatus)
         }
     }
 

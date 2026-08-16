@@ -6,7 +6,7 @@ struct LauncherApp: App {
 
     var body: some Scene {
         Settings {
-            EmptyView()
+            SettingsView(settings: AppSettings.shared)
         }
     }
 }

@@ -23,6 +23,7 @@ struct SearchFieldView: NSViewRepresentable {
         textField.maximumNumberOfLines = 1
         textField.cell?.usesSingleLineMode = true
         textField.cell?.wraps = false
+        textField.textColor = .labelColor
         context.coordinator.updateCallbacks(
             onMoveUp: onMoveUp,
             onMoveDown: onMoveDown,
@@ -36,6 +37,7 @@ struct SearchFieldView: NSViewRepresentable {
         if nsView.textField.stringValue != text {
             nsView.textField.stringValue = text
         }
+        nsView.textField.textColor = .labelColor
         context.coordinator.updateCallbacks(
             onMoveUp: onMoveUp,
             onMoveDown: onMoveDown,
