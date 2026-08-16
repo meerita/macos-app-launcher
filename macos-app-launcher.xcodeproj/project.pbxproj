@@ -23,6 +23,12 @@
 		10A00000000000000000010F /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10A00000000000000000000F /* Carbon.framework */; };
 		10A000000000000000000110 /* ApplicationSearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000010 /* ApplicationSearchTests.swift */; };
 		10A000000000000000000111 /* ApplicationCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000011 /* ApplicationCatalogTests.swift */; };
+		10A000000000000000000112 /* StatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000014 /* StatusBarController.swift */; };
+		10A000000000000000000113 /* KeyboardShortcutPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000015 /* KeyboardShortcutPreset.swift */; };
+		10A000000000000000000114 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000016 /* AppSettings.swift */; };
+		10A000000000000000000115 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000017 /* SettingsView.swift */; };
+		10A000000000000000000116 /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000018 /* SettingsWindowController.swift */; };
+		10A000000000000000000117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 10A000000000000000000019 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,12 @@
 		10A000000000000000000011 /* ApplicationCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCatalogTests.swift; sourceTree = "<group>"; };
 		10A000000000000000000012 /* macos-app-launcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macos-app-launcher.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10A000000000000000000013 /* macos-app-launcherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macos-app-launcherTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		10A000000000000000000014 /* StatusBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarController.swift; sourceTree = "<group>"; };
+		10A000000000000000000015 /* KeyboardShortcutPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardShortcutPreset.swift; sourceTree = "<group>"; };
+		10A000000000000000000016 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		10A000000000000000000017 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		10A000000000000000000018 /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
+		10A000000000000000000019 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +107,10 @@
 				10A000000000000000000063 /* Launching */,
 				10A000000000000000000064 /* Usage */,
 				10A000000000000000000065 /* HotKey */,
+				10A000000000000000000068 /* Settings */,
 				10A000000000000000000066 /* Window */,
 				10A000000000000000000067 /* UI */,
+				10A000000000000000000019 /* Assets.xcassets */,
 				10A00000000000000000000E /* Info.plist */,
 			);
 			path = "macos-app-launcher";
@@ -133,6 +147,7 @@
 			children = (
 				10A000000000000000000001 /* LauncherApp.swift */,
 				10A000000000000000000002 /* AppDelegate.swift */,
+				10A000000000000000000014 /* StatusBarController.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -174,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				10A000000000000000000008 /* HotKeyManager.swift */,
+				10A000000000000000000015 /* KeyboardShortcutPreset.swift */,
 			);
 			path = HotKey;
 			sourceTree = "<group>";
@@ -195,6 +211,16 @@
 				10A00000000000000000000D /* ApplicationRow.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		10A000000000000000000068 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				10A000000000000000000016 /* AppSettings.swift */,
+				10A000000000000000000017 /* SettingsView.swift */,
+				10A000000000000000000018 /* SettingsWindowController.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10A000000000000000000117 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,13 +329,18 @@
 				10A000000000000000000104 /* ApplicationCatalog.swift in Sources */,
 				10A000000000000000000105 /* ApplicationSearch.swift in Sources */,
 				10A000000000000000000106 /* ApplicationLauncher.swift in Sources */,
+				10A000000000000000000114 /* AppSettings.swift in Sources */,
 				10A000000000000000000107 /* UsageStore.swift in Sources */,
 				10A000000000000000000108 /* HotKeyManager.swift in Sources */,
+				10A000000000000000000113 /* KeyboardShortcutPreset.swift in Sources */,
 				10A000000000000000000109 /* LauncherWindowController.swift in Sources */,
 				10A00000000000000000010A /* LauncherViewModel.swift in Sources */,
 				10A00000000000000000010B /* LauncherView.swift in Sources */,
 				10A00000000000000000010C /* SearchFieldView.swift in Sources */,
 				10A00000000000000000010D /* ApplicationRow.swift in Sources */,
+				10A000000000000000000112 /* StatusBarController.swift in Sources */,
+				10A000000000000000000115 /* SettingsView.swift in Sources */,
+				10A000000000000000000116 /* SettingsWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +486,7 @@
 		10A000000000000000000082 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -473,6 +506,7 @@
 		10A000000000000000000083 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = NO;
 				COMBINE_HIDPI_IMAGES = YES;

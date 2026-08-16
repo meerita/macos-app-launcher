@@ -17,6 +17,14 @@ The app is intentionally narrow. It does not search files, documents, the web, b
 xcodebuild -project macos-app-launcher.xcodeproj -scheme macos-app-launcher -destination 'platform=macOS,arch=arm64' -derivedDataPath .derivedData build
 ```
 
+## Install
+
+```sh
+Scripts/install-to-applications.sh
+```
+
+The installer builds a Release app, copies it to `/Applications/App Launcher.app`, and opens it. From there it can be pinned to the Dock or launched from Finder.
+
 ## Test
 
 ```sh
@@ -41,4 +49,4 @@ No entitlements are added. The app scans only standard application locations:
 - `~/Applications`
 - the application directories returned by `FileManager.urls(for: .applicationDirectory, in:)`
 
-The global shortcut uses the native Carbon `RegisterEventHotKey` API for `Option-Space`, which does not require Accessibility permission.
+The global shortcut uses the native Carbon `RegisterEventHotKey` API, which does not require Accessibility permission.

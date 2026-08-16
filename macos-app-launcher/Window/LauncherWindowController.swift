@@ -4,10 +4,19 @@ import SwiftUI
 
 @MainActor
 final class LauncherWindowController: NSWindowController, NSWindowDelegate {
+    private enum Layout {
+        static let contentWidth: CGFloat = 660
+        static let searchHeight: CGFloat = 72
+        static let rowHeight: CGFloat = 52
+        static let rowSpacing: CGFloat = 2
+        static let listVerticalPadding: CGFloat = 14
+        static let dividerHeight: CGFloat = 1
+    }
+
     private let viewModel: LauncherViewModel
     private var cancellables: Set<AnyCancellable> = []
 
-    init(viewModel: LauncherViewModel) {
+    init(viewModel: LauncherViewModel, settings: AppSettings) {
         self.viewModel = viewModel
 
         let panel = LauncherPanel()
@@ -25,7 +34,11 @@ final class LauncherWindowController: NSWindowController, NSWindowDelegate {
         super.init(window: panel)
 
         panel.delegate = self
-        panel.contentView = NSHostingView(rootView: LauncherView(viewModel: viewModel))
+        let hostingView = NSHostingView(rootView: LauncherView(viewModel: viewModel, settings: settings))
+        hostingView.wantsLayer = true
+        hostingView.layer?.backgroundColor = NSColor.clear.cgColor
+        hostingView.layer?.borderWidth = 0
+        panel.contentView = hostingView
 
         viewModel.$results
             .receive(on: RunLoop.main)
@@ -75,9 +88,28 @@ final class LauncherWindowController: NSWindowController, NSWindowDelegate {
             return
         }
 
-        let width: CGFloat = 660
+        let width = Layout.contentWidth
+        guard resultCount > 0 else {
+            let currentFrame = window.frame
+            let topY = currentFrame.maxY
+            let centerX = currentFrame.midX
+            let frame = NSRect(
+                x: centerX - width / 2,
+                y: topY - Layout.searchHeight,
+                width: width,
+                height: Layout.searchHeight
+            )
+            window.setFrame(frame, display: true, animate: false)
+            return
+        }
+
         let visibleRows = max(1, min(resultCount, 8))
-        let height = CGFloat(82 + (visibleRows * 56) + 14)
+        let listSpacing = CGFloat(max(0, visibleRows - 1)) * Layout.rowSpacing
+        let height = Layout.searchHeight
+            + Layout.dividerHeight
+            + Layout.listVerticalPadding
+            + (CGFloat(visibleRows) * Layout.rowHeight)
+            + listSpacing
         let currentFrame = window.frame
         let topY = currentFrame.maxY
         let centerX = currentFrame.midX
@@ -128,11 +160,15 @@ final class LauncherWindowController: NSWindowController, NSWindowDelegate {
 private final class LauncherPanel: NSPanel {
     init() {
         super.init(
-            contentRect: NSRect(x: 0, y: 0, width: 660, height: 152),
+            contentRect: NSRect(x: 0, y: 0, width: 660, height: 72),
             styleMask: [.borderless, .nonactivatingPanel, .fullSizeContentView],
             backing: .buffered,
             defer: false
         )
+
+        contentView?.wantsLayer = true
+        contentView?.layer?.backgroundColor = NSColor.clear.cgColor
+        contentView?.layer?.borderWidth = 0
     }
 
     override var canBecomeKey: Bool {

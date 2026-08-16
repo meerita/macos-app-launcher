@@ -25,25 +25,20 @@ struct ApplicationSearch: Sendable {
         now: Date = Date()
     ) -> [SearchResult] {
         let normalizedQuery = Self.normalized(query)
+        guard !normalizedQuery.isEmpty else {
+            return []
+        }
+
         let scoredResults: [SearchResult]
 
-        if normalizedQuery.isEmpty {
-            scoredResults = applications.map { application in
-                SearchResult(
-                    application: application,
-                    score: usageScore(for: usage[application.id], now: now)
-                )
+        scoredResults = applications.compactMap { application in
+            guard let baseScore = matchScore(query: normalizedQuery, applicationName: application.name) else {
+                return nil
             }
-        } else {
-            scoredResults = applications.compactMap { application in
-                guard let baseScore = matchScore(query: normalizedQuery, applicationName: application.name) else {
-                    return nil
-                }
-                return SearchResult(
-                    application: application,
-                    score: baseScore + usageScore(for: usage[application.id], now: now)
-                )
-            }
+            return SearchResult(
+                application: application,
+                score: baseScore + usageScore(for: usage[application.id], now: now)
+            )
         }
 
         return scoredResults.sorted { lhs, rhs in
